@@ -4,20 +4,39 @@
     <meta charset="utf-8" />
     <title>WEBSITE.LOGIN2</title>
     <link rel="stylesheet" type="text/css" href="css/login.css" />
+    <script src="js/login.js"></script>
   </head>
   <body>
     <div class="login-box">
       <h1>Login</h1>
 
       <div class="textbox">
-        <input type="text" placeholder="Username" name="" value="" />
+        <input
+          type="text"
+          placeholder="Username"
+          name=""
+          value=""
+          id="username"
+        />
       </div>
 
       <div class="textbox">
-        <input type="Password" placeholder="Password" name="" value="" />
+        <input
+          type="Password"
+          placeholder="Password"
+          name=""
+          value=""
+          id="password"
+        />
       </div>
 
-      <input class="btn" type="button" name="" value="Sign in" />
+      <input
+        class="btn"
+        type="button"
+        name=""
+        value="Sign in"
+        onclick="sumbmit_login()"
+      />
     </div>
   </body>
 </html>
