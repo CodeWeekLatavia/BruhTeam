@@ -31,6 +31,10 @@ app.get("/login", (req, res) => {
   res.sendFile("login.html", { root: "views" });
 });
 
+app.get("/register", (req, res) => {
+  res.sendFile("register.html", { root: "views" });
+});
+
 app.get("/postinf/", (req, res) => {
   res.setHeader("Content-Type", "application/json");
   res.end(JSON.stringify(req.query));
@@ -67,3 +71,35 @@ app.post("/submit_login", function (req, res) {
       });
   });
 });
+
+// app.post("/submit_register", function (req, res) {
+//   const body = req.body;
+//   let log_sql = `SELECT * FROM LOGIN_USERS WHERE (UserName="${body.name}" OR Email="${body.name}") AND PSWD="${body.password}"`; // get all users with following name/password
+
+//   res.setHeader("Content-Type", "application/json");
+
+//   db.all(log_sql, [], (err, rows) => {
+//     if (err) {
+//       throw err;
+//     }
+//     if (rows.length > 0) {
+//       var usr = rows[0];
+//       let cur_key = af.generateUID(15);
+//       let del_existing = `DELETE FROM ACTIVE_SESSIONS WHERE UID="${usr.UID}"`; // remove all sessions with this UID before adding new one
+//       let add_session_sql = `INSERT INTO ACTIVE_SESSIONS VALUES (${usr.UID}, "${cur_key}")`; // add session to db
+//       db.all(del_existing);
+//       db.all(add_session_sql);
+
+//       res.cookie("bruhWorkrememberLogin", cur_key, {
+//         maxAge: 900000,
+//         httpOnly: true,
+//       });
+
+//       res.json({ success: true });
+//     } else
+//       res.json({
+//         success: false,
+//         reason: "No users with this credentials",
+//       });
+//   });
+// });
