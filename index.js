@@ -13,3 +13,11 @@ app.get("/", (req, res) => {
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
 });
+
+app.get("/public/js/index.js", (req, res) => {
+  res.sendFile("/js/index.js", { root: "public" });
+});
+
+app.get("/public/css/main.css", (req, res) => {
+  res.sendFile("/css/main.css", { root: "public" });
+});
