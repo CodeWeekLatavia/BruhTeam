@@ -24,15 +24,17 @@ body {
 }
 .image-container {
   background: white;
-  width: 80px;
-  height: 80px;
   border-radius: 50%;
   padding: 5px;
-  transform: translate(100px, 100px);
+  aspect-ratio: 1;
+  position: absolute;
+  left: 2%;
+  top: 5%;
+  width: 25%;
 }
 .image-container img {
-  width: 700%;
-  height: 700%;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
 }
 .lower-container {
@@ -77,4 +79,10 @@ h4 {
 
 .interest-container > * {
   display: inline;
+}
+
+img.interest {
+  width: 2%;
+  height: 2%;
+  margin: 5px;
 }

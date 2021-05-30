@@ -24,7 +24,7 @@ header {
   background: transparent;
   float: left;
   position: fixed;
-  height: 110px;
+  height: 130px;
   background-color: #2e2c2c;
   top: 0;
 }
@@ -140,9 +140,11 @@ a:hover {
 
 #red-cont {
   font-size: 1em;
-  line-height: 0px;
-  margin-left: 1235px;
-  margin-top: -50px;
+  right: 100px;
+  width: 10%;
+  top: 5px;
+  /* width: 5%; */
+  position: absolute;
 }
 
 .floating-button {
@@ -152,7 +154,7 @@ a:hover {
   height: 45px;
   line-height: 45px;
   border-radius: 45px;
-  margin: 10px 20px;
+  margin: 5px;
   font-family: "Montserrat", sans-serif;
   font-size: 11px;
   text-transform: uppercase;
@@ -231,8 +233,9 @@ a:hover {
 }
 .ad {
   position: absolute;
-  left: -197%;
-  bottom: 0;
+  left: -50%;
+  top: 0px;
+  width: 150%;
 }
 
 .nav a {
@@ -281,10 +284,10 @@ footer {
   position: absolute;
   display: flex;
   top: 20%;
-  left: 15%;
+  left: 20%;
   width: 60%;
   direction: column;
-  flex-basis: 50%;
+  display: inline-block;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa&display=swap");
@@ -450,8 +453,9 @@ footer {
 }
 
 .description-holder {
-  display: flex;
+  /* display: flex; */
   flex-wrap: wrap;
+  display: block;
 }
 
 .description-holder > * {
@@ -639,4 +643,10 @@ footer {
 
 .product-hidden-please-parseme {
   visibility: hidden;
+}
+
+img.interest {
+  width: 4%;
+  height: 4%;
+  margin: 10px;
 }

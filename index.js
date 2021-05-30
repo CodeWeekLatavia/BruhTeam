@@ -5,7 +5,7 @@ const af = require("./modules/functions.js");
 const fs = require("fs");
 const e = require("express");
 
-const POST_RESP_AMOUNT = 3;
+const POST_RESP_AMOUNT = 10;
 
 var current_last_usr = 0;
 var valid_languages = ["English", "Russian", "Latvian"];
@@ -35,7 +35,7 @@ app.get("/", (req, res) => {
 
 app.get("/post_full_info", (req, res) => {
   check_if_logged_in(req, res, (req, res, uid) => {
-    var post_info_sql = `SELECT * FROM POSTS_MAIN WHERE UPID=${uid}`;
+    var post_info_sql = `SELECT * FROM POSTS_MAIN WHERE UrlID="${req.query.postid}"`;
     var resp_obj = {};
     db.all(post_info_sql, [], (err, rows) => {
       if (err) throw err;
@@ -202,7 +202,7 @@ async function compile_posts_resp(rows, old_time, res) {
   }
   var cur_obj = {};
   var response_now =
-    l + POST_RESP_AMOUNT > rows.length ? l - rows.length : POST_RESP_AMOUNT;
+    l + POST_RESP_AMOUNT > rows.length ? rows.length - l : POST_RESP_AMOUNT;
   for (
     var i = l;
     i <
@@ -236,10 +236,3 @@ async function compile_posts_resp(rows, old_time, res) {
     });
   }
 }
-
-// if (!(row.UID in ret_obj)) ret_obj[row.UID] = { interests: [] };
-//     let cur_obj = ret_obj[row.UID];
-//     cur_obj.interests.push(row.interest);
-//     cur_obj
-
-// * - add in future

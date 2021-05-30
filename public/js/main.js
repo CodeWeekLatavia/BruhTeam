@@ -1,12 +1,5 @@
-// var trigger = document.getElementById("toggle");
-// var box = document.getElementById("menu");
-
-// toggle.addEventListener("click", function () {
-//   box.classList.toggle("active");
-// });
-
 var post_el =
-  '<div class="product-hidden-please-parseme">            <img src="work.jpg" />            <div class="product-info">              <h3 class="product-name">.dfmdfgkl;</h3>              <div class="description-holder">                <span clas="decription">asdasd</span>                <h4 class="product-price">asdasdasd</h4>                <h4 class="product-offer">asdasda</h4>              </div>              <div class="product-interest">                <span>Areas: </span>          </div>            </div>          </div>';
+  '<div class="product-hidden-please-parseme">            <img src="work.jpg" />            <div class="product-info">              <h3 class="product-name"></h3>              <div class="description-holder">                <span clas="decription"></span>                <h4 class="product-price"></h4>                <h4 class="product-offer"></h4>              </div>              <div class="product-interest">                <span>Intereses loki: </span>          </div>            </div>          </div>';
 
 var oldest_time = 99999999999999;
 
