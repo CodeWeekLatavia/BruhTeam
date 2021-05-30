@@ -41,7 +41,7 @@ app.get("/post_full_info", (req, res) => {
       if (err) throw err;
       resp_obj = rows[0];
       resp_obj["interests"] = [];
-      var post_interests_sql = `SELECT * FROM POSTS_INTERESTS WHERE UPID=${uid}`;
+      var post_interests_sql = `SELECT * FROM POSTS_INTERESTS WHERE UPID=${resp_obj.UPID}`;
       db.all(post_interests_sql, [], (err, rows) => {
         if (err) throw err;
 
