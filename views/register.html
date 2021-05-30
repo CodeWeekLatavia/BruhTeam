@@ -3,6 +3,7 @@
   <head>
     <title>Registration</title>
     <link rel="stylesheet" href="css/register.css" type="text/css" />
+	<script src="js/register.js"></script>
   </head>
   <body>
     <div class="main">
@@ -54,16 +55,24 @@
             placeholder="Enter Your Work Email"
           />
           <br /><br />
+		  <label>Password : </label>
+          <br />
+          <input
+            type="password"
+            name="fname"
+            id="password"
+          />
+          <br /><br />
           <label>Gender : </label>
           <br />
           &nbsp;&nbsp;&nbsp;
-          <input type="radio" name="gender" id="gender" />
+          <input type="radio" name="gender" id="male"/>
           &nbsp;
-          <span id="male">Male</span>
+          <span>Male</span>
           &nbsp;&nbsp;&nbsp;&nbsp;
-          <input type="radio" name="gender" id="female" />
+          <input type="radio" name="gender" id="female"/>
           &nbsp;
-          <span id="female">Female</span>
+          <span>Female</span>
           <br /><br />
           <label>Your Language : </label>
           <br />
@@ -80,7 +89,7 @@
           &nbsp;
           <span id="Russian">Russian</span>
           <br /><br />
-          <input type="submit" value="Submit" name="submit" id="submit" onclick="submit_register()" />
+          <input type="button" value="Submit" name="submit" id="submit" onclick="submit_register()" />
 		</div>
       </div>
     </div>

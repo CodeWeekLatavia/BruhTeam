@@ -1,30 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Проверка</title>
-    <link rel="stylesheet" href="css/main.css" />
-  </head>
-  <body>
-    <header>
-      <div id="logo">
-        <span>Some cool name</span>
-      </div>
-      <div id="btn">
-        <a href="/login" class="floating-button">Login</a>
-        <a href="/register" class="floating-button">Register</a>
-      </div>
-    </header>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>BruhWork</title>
+	<link rel="stylesheet" href="css/main.css">
+	<script src="js/main.js"></script>
+</head>
+	<body>
+		<header>
+			<div id="logo">
+				<span>BruhWork</span>
+			</div>
+			<div id="red-cont">
+				<a href="/login" class="floating-button-hidden">Login</a>
+				<a href="/register" class="floating-button-hidden">Register</a>
+				<span class="floating-span-hidden"></span>
+			</div>
+			<script>load_cred()</script>
+		</header>
+		<div class="line"></div>
 
-    <div class="nav">
-      <a href="#">Фильтр</a>
-      <a href="#">Категории</a>
-      <a href="#">Работы неподалеку</a>
-      <a href="#">О нас</a>
-    </div>
-    <div class="nav_1"></div>
+		<div id="posts-container"></div>
 
-    <footer>ABOBUS</footer>
-  </body>
+		<div class="nav">
+			<div class="container container--3">
+
+				<div class="text text--1">
+					<ul><a href="#">Filtrs</a></ul>
+				</div>
+
+				<div class="text text--2">
+					<ul><a href="darb.html">Categories</a></ul>
+				</div>
+
+				<div class="text text--3">
+					<ul><a href="mapssrc.html">Works near</a></ul>
+				</div>
+			
+				<div class="text text--4">
+					<ul><a href="#">About us</a></ul>
+				</div>
+		
+			</div>
+			<div class="spisok"></div>
+		</div>
+		<div class="nav_1">
+			<img class="ad" src="https://th.bing.com/th/id/Re671808e4bca7e7c083bfa789fec09ea?rik=BJMZrjpUn7u4UQ&riu=http%3a%2f%2fwww.thebigad.com%2fwp-content%2fuploads%2f2017%2f11%2fanimated-gif-browsing-book.gif&ehk=sOW9UPqhXcY5hJKDhVtghR6DXpaAK9py7OQlJbY4jy0%3d&risl=&pid=ImgRaw"></img>
+		</div>
+
+		<footer> ABOBUS </footer>
+		<script>laods_posts()</script>
+	</body>
 </html>

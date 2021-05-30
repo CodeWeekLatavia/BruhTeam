@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Profile Card</title>
+    <link rel="stylesheet" href="../css/full_inf.css" />
+    <script src="../js/full_info.js"></script>
+  </head>
+  <body>
+    <div class="card-container">
+      <div class="upper-container">
+        <div class="image-container">
+          <img id="main-desc-img" />
+        </div>
+      </div>
+      <div class="lower-container">
+        <div>
+          <h3 class="heading" id="main-heading"></h3>
+          <div class="interest-container" id="interest-container">
+            <span>Spheres: </span>
+          </div>
+        </div>
+        <div>
+          <p id="main-desc">
+            PLACE FOR DETAILED DESCRIPTION..................................
+          </p>
+        </div>
+        <div>
+          <p id="main-salary">
+            PLACE FOR SALARY.............................................
+          </p>
+        </div>
+        <div>
+          <p id="main-diff">
+            PALCE FOR DIFICULTY.............................................
+          </p>
+        </div>
+        <div>
+          <a class="btn" onclick="submit_for_job()">Apply</a>
+        </div>
+      </div>
+    </div>
+    <script>
+      load_post_info();
+    </script>
+  </body>
+</html>
