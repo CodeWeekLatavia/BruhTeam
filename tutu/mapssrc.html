@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Проверка</title>
+	<link rel="stylesheet" href="css/main.css">
+	<script>
+      // Initialize and add the map
+      function initMap() {
+        // The location of Uluru
+        const uluru = { lat: -25.344, lng: 131.036 };
+        // The map, centered at Uluru
+        const map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 4,
+          center: uluru,
+        });
+        // The marker, positioned at Uluru
+        const marker = new google.maps.Marker({
+          position: uluru,
+          map: map,
+        });
+      }
+    </script>
+</head>
+<body>
+	<header>
+		<div id="logo">
+			<span><a class="span" href="index.html">Some cool name</a></span>
+		</div>
+		<div id="btn">
+			<a href="" class="floating-button">Login</a>
+			<a href="" class="floating-button">Register</a>
+		</div>
+	</header>
+
+	<div class="line"></div>
+
+
+
+<div class="nav">
+	<div class="spisok">
+	
+		<div class="container container--3">
+		<div class="text text--1">
+		<a href="index.html">back</a>
+		</div>
+		</div>
+	</div>
+</div>
+
+<div id="map" class="mappos"></div>
+
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA4mxRqVlMrlNEeC7DWiz-NEFOMBD2ND34&callback=initMap&libraries=&v=weekly"
+      async
+    ></script>
+	
+
+
+
+</body>
+</html>
